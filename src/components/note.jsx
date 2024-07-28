@@ -13,7 +13,7 @@ const Note = ({ id, title, content, created, updated, archived }) => {
                 </p>
                 <SettingsRounded className="text-gray-300" fontSize="inherit"/>
             </div>
-            <h2 className="noteTitle">{title || "(Untiteled Note)"}</h2>
+            <h2 className="noteTitle">{title || "(Untitled Note)"}</h2>
             <p className="noteContent px-2 opacity-85">{content || "(Empty Note)"}</p>
 
             {/*<p className="text-white text-sm mt-8 font-medium">
