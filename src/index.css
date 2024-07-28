@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* HEADER FONT */
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-heading;
+    }
+}
+
+/* NAV BAR */
+.navBarButton {
+    @apply py-2 rounded-full text-xl text-white font-light font-heading flex items-center;
+}
+
+.navBarButton:not(.search) {
+    @apply px-4;
+}
+
+.navBarButton:not(.bg-menu_active):hover {
+    @apply bg-menu_hover;
+}
+
+.noteContent {
+    width: 30ch;
+    height: 72px;
+    @apply text-gray-200 font-light text-pretty break-words line-clamp-3;
+}
+
+.noteTitle {
+    max-width: 260px;
+    max-height: 2ch;
+    @apply text-3xl mt-3 font-bold text-white my-3 truncate break-words;
+}
+
+.noteDetail {
+    width: 120ch;
+    @apply text-gray-200 font-light text-pretty break-words flex flex-col justify-center items-center;
+}
+
+.noteDetailContent {
+    max-width: 100%;
+    @apply text-gray-200 font-light text-pretty break-words;
+}
+.noteDetailTitle {
+    width: 80ch;
+    max-width: 100%;
+    @apply text-4xl font-bold text-white my-3 break-words text-pretty font-bold text-headline;
+}
+
+.addButton {
+    @apply transition-all;
+}
+
+.addButton:hover {
+    @apply scale-110;
+}
+
+.addButton:active {
+    @apply scale-95 opacity-80;
+}
+
+/*Scrollbar*/
+/* For Webkit browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-white;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: white transparent;
+}
+
+/* For Internet Explorer and Edge */
+body {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
